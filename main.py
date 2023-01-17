@@ -58,7 +58,7 @@ created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 async def news_today(message: types.Message):
     with open('core/json/news_almaty.json', 'r') as file:
             all_news = json.load(file)
-    if message.text.lower() == 'запросить новости на сегодня':
+    if message.text.lower() == 'все новости':
         NewsAlmatyParser()
         news_almaty = []
         for item in all_news[:3]:
